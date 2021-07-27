@@ -29,7 +29,7 @@ export async function upvoteRecommendation(req: Request, res: Response) {
     const id = Number(req.params.id);
 
     const result = await recommendationService.upvoteRecommendation(id);
-
+    
     if (result === null) {
       return res.sendStatus(404);
     }
